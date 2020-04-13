@@ -26,7 +26,7 @@ export default [
     image: epi,
     description:
       "Use the arrow keys to get as many food items as you can, before the virus gets you",
-    url: "http://localhost:3000/games/going-epi",
+    url: "https://vapour.netlify.com/games/going-epi",
     multiplayer: false
   },
   {
@@ -35,7 +35,7 @@ export default [
     image: snake,
     description:
       'Control the snake with arrow keys to eat as many apples as you can!',
-    url: "http://localhost:3000/games/snake/snake.html",
+    url: "https://vapour.netlify.com/games/snake/snake.html",
     multiplayer: false
   },
 

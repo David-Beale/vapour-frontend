@@ -19,10 +19,10 @@ class SignUp extends Component {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
-  onChange(event) {
+  onChange (event) {
     this.setState({ [event.target.name]: event.target.value });
   }
-  onSubmit(e) {
+  onSubmit (e) {
     e.preventDefault();
     const post = {
       name: this.state.name,
@@ -51,7 +51,7 @@ class SignUp extends Component {
       });
   }
 
-  render() {
+  render () {
     return (
       <div className="signup__container">
         <div className="signup__title-container">
@@ -59,17 +59,19 @@ class SignUp extends Component {
           <p>please complete the form to register your account</p>
           <br />
         </div>
-        {this.state.errors.length > 0 &&
-          this.state.errors.map(error => {
-            return (
-              <div>
-                <ErrorMessage error={error} />
-              </div>
-            );
-          })}
-        {this.state.success.length > 0 && (
-          <SuccessMessage success={this.state.success} />
-        )}
+        <div className="error-container">
+          {this.state.errors.length > 0 &&
+            this.state.errors.map(error => {
+              return (
+                <div>
+                  <ErrorMessage error={error} />
+                </div>
+              );
+            })}
+          {this.state.success.length > 0 && (
+            <SuccessMessage success={this.state.success} />
+          )}
+        </div>
         <form className="signup-form" onSubmit={this.onSubmit}>
           <label htmlFor="name">Name</label>
           <input
