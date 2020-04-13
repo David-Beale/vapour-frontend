@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../../../styles/player-styles/playercard.css";
 import chatIcon from "../../../assets/icons/chat-icon.png";
-import { useSelector } from "react-redux";
 import placeHolderAvatar from "../../../assets/images/placeholder-avatar.svg";
 
 const PlayerCard = ({
@@ -10,7 +9,6 @@ const PlayerCard = ({
   handleShowChat,
   secondUser
 }) => {
-  const currentUser = useSelector(({ loginReducer }) => loginReducer.user);
   const status = () => (player.status ? "online" : "offline");
 
   const statusButton = () =>

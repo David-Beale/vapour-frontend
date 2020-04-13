@@ -4,7 +4,6 @@ import Webcam from "react-webcam";
 import ImageUploader from "react-images-upload";
 import * as faceapi from "face-api.js";
 import {
-  uploadAvatar,
   updateUser
 } from "../../redux/actions/current-user-actions";
 import Modal from "react-modal";
@@ -148,6 +147,7 @@ const ProfileCamera = ({
                 className="profile-camera__avatar"
                 src={imageSrc}
                 id="myImage"
+                alt="profile avatar"
               />
               <button
                 className="button profile-camera__button"
