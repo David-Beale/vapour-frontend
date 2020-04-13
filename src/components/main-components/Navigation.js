@@ -4,12 +4,13 @@ import { useDispatch } from 'react-redux';
 import '../../styles/main-styles/navigation.css';
 import logo from '../../assets/images/logo.svg';
 import { Link } from 'react-router-dom';
+const SERVER = 'https://vapour-backend.herokuapp.com/'
 
 const Navigation = ({ currentUser, socket }) => {
   const dispatch = useDispatch();
 
   const logout = () => {
-    fetch('http://localhost:4000/users/logout', {
+    fetch(`${SERVER}users/logout`, {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json'

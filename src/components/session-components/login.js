@@ -3,6 +3,7 @@ import ErrorMessage from "./login-error";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import "../../styles/session-styles/login-form.css";
+const SERVER = 'https://vapour-backend.herokuapp.com/'
 
 function Login () {
   const isAuth = useSelector(({ loginReducer }) => loginReducer.isAuth);
@@ -25,7 +26,7 @@ function Login () {
       email,
       password
     };
-    fetch("http://localhost:4000/users/login", {
+    fetch(`${SERVER}users/login`, {
       method: "POST",
       headers: {
         "content-type": "application/json"

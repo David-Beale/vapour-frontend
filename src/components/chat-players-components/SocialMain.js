@@ -17,13 +17,11 @@ const SocialMain = ({ currentUser, socket }) => {
   const [secondUser, setSecondUser] = useState({});
   const [players, setPlayers] = useState([]);
 
-  const [loggedInUsers, setLoggedInUsers] = useState([]);
-
   useEffect(() => {
     if (players) {
       socket.on('updateUsers', data => {
+        console.log(data)
         const newPlayers = players.map(player => {
-          setLoggedInUsers([...data]);
           if ([...data].includes(player._id)) {
             return Object.assign(player, { status: 1 });
           } else {
@@ -45,7 +43,6 @@ const SocialMain = ({ currentUser, socket }) => {
       .then(res => setPlayers(res))
       .then(() => dispatch(firstSocketLogin(currentUser._id, socket)))
       .catch(err => console.log(err));
-
     return () => socket.emit('logout-user', currentUser._id);
   }, []);
 
@@ -103,6 +100,7 @@ const SocialMain = ({ currentUser, socket }) => {
   };
 
   if (players.length) {
+    console.log(players)
     return (
       <div className="social-main__container">
         <PlayerList

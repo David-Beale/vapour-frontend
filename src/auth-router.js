@@ -8,12 +8,13 @@ import Loading from "./components/session-components/loading";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { AnimatedSwitch } from "react-router-transition";
+const SERVER = 'https://vapour-backend.herokuapp.com/'
 
 function AuthRouter () {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetch("http://localhost:4000/users", {
+    fetch(`${SERVER}users`, {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json"

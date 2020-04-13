@@ -1,9 +1,9 @@
-const ENDPOINT = "http://localhost:4000/";
+const SERVER = 'https://vapour-backend.herokuapp.com/'
 
 const sendMessage = async (newMessage, recipientId, senderId, senderName) => {
 
   const message = { message: newMessage, time: Date.now() };
-  const response = await fetch(ENDPOINT + "messages", {
+  const response = await fetch(SERVER + "messages", {
     method: 'POST',
     mode: 'cors',
     headers: {
@@ -17,7 +17,7 @@ const sendMessage = async (newMessage, recipientId, senderId, senderName) => {
 const getPlayerMessages = async (sender, recipient) => {
   const response = await fetch(
     //from parameter determined the person who has LOGGED IN, to detetmines to whom the messages will be sent
-    ENDPOINT + `users/find/?from=${sender._id}&to=${recipient._id}`
+    SERVER + `users/find/?from=${sender._id}&to=${recipient._id}`
   )
     .then(res => res.json())
     .catch(err => err);

@@ -11,8 +11,8 @@ const PlayerCard = ({
 }) => {
   const status = () => (player.status ? "online" : "offline");
 
-  const statusButton = () =>
-    player.status ? "button-enabled" : "button-disabled";
+  const statusButton = () => player.status ? "button-enabled" : "button-disabled";
+
   return (
     <div className={`player-card__container ${status()}`}>
       <img
@@ -39,7 +39,7 @@ const PlayerCard = ({
             alt="player-thumbnail"
           ></img>
         </Link>
-       
+
       </div>
     </div>
   );

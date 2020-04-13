@@ -1,4 +1,5 @@
-const baseURL = "http://localhost:4000/users/";
+const SERVER = 'https://vapour-backend.herokuapp.com/'
+const baseURL = `${SERVER}users/`;
 
 export const GET_CURRENT_USER = "GET_CURRENT_USER";
 export const UPDATE_MESSAGES = "UPDATE_MESSAGES";

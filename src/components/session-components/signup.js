@@ -3,6 +3,7 @@ import ErrorMessage from "./ErrorMessage";
 import SuccessMessage from "./SuccessMessage";
 import { Link } from "react-router-dom";
 import "../../styles/session-styles/signup-form.css";
+const SERVER = 'https://vapour-backend.herokuapp.com/'
 
 class SignUp extends Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class SignUp extends Component {
       password: this.state.password,
       password2: this.state.password2
     };
-    fetch("http://localhost:4000/users/register", {
+    fetch(`${SERVER}users/register`, {
       method: "POST",
       headers: {
         "content-type": "application/json"
