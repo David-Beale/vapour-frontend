@@ -9,14 +9,10 @@ const GameScreen = () => {
   const { id } = useParams();
   const game = gamedb.find(el => el.id == id);
   const frameRef = useRef(null);
-  console.log(frameRef)
-  const frameWidth = game.id == 2 ? '500' : '1500'; //a hack to deal with Asteroids being tiny
-  const frameHeight = game.id == 5 ? '1000' : '700'; 
+  const frameWidth = '1500'; 
+  const frameHeight = game.id == 2 ? '750' : '700'; 
   return (
     <div className="game-screen__container">
-      {/* <div className="game-screen__header">
-				<h1>{game ? game.name : 'let\'s play'}</h1>
-			</div> */}
       <iframe
         ref={frameRef}
         allow="fullscreen"

@@ -5,16 +5,11 @@ import Login from "./components/session-components/login";
 import Landing from "./components/session-components/landing";
 import App from "./App";
 import Loading from "./components/session-components/loading";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { AnimatedSwitch } from "react-router-transition";
 
-function AuthRouter() {
+function AuthRouter () {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -41,8 +36,6 @@ function AuthRouter() {
         atActive={{ opacity: 1 }}
         className="App switch-wrapper"
       >
-        {/* <Switch> */}
-
         <Auth exact path="/landing" component={Landing} />
         <Auth exact path="/register" component={Signup} />
         <Auth exact path="/login" component={Login} />
@@ -51,7 +44,6 @@ function AuthRouter() {
             <Protected path="/" component={() => <App socket={socket} />} />
           )}
         </SocketContext.Consumer>
-        {/* </Switch> */}
       </AnimatedSwitch>
     </Router>
   );
@@ -66,9 +58,9 @@ const Auth = ({ component: Component, ...rest }) => {
         return !isAuth ? (
           <Component {...props} />
         ) : (
-          // Redirect to root if user is authenticated
-          <Redirect to="/" />
-        );
+            // Redirect to root if user is authenticated
+            <Redirect to="/" />
+          );
       }}
     />
   );
@@ -85,9 +77,9 @@ const Protected = ({ component: Component, ...rest }) => {
         return isAuth ? (
           <Component {...props} />
         ) : (
-          // Redirect to the login page if the user is not authenticated
-          <Redirect to="/landing" />
-        );
+            // Redirect to the login page if the user is not authenticated
+            <Redirect to="/landing" />
+          );
       }}
     />
   );

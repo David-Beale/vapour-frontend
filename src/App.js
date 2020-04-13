@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './styles/App.css';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Main from './components/main-components/Main';
 import Navigation from './components/main-components/Navigation';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';

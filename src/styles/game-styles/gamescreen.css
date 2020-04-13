@@ -1,22 +1,22 @@
 .game-screen__container {
-  background-image: linear-gradient(rgba(26, 63, 86, 0.726) ,rgba(27, 40, 56, 0.452) 25%);
-  position: relative;
-  z-index: 10;
 	height: 100%;
   width:100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .game-screen__header {
 	font-size: 1rem;
 	font-family: Roboto;
 	margin: 1.6rem;
-	text-decoration: none;
+  text-decoration: none;
+  
 }
 
 #gameFrame {
   border: none;
+  background-color: black;
 }

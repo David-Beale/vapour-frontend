@@ -5,7 +5,7 @@
   left: 40px;
   right: 40px;
   bottom: 40px;
-  background: #1d1f24;
+  background: #1d1f248c;
   font-size: larger;
   padding: 3rem;
 }
@@ -17,6 +17,7 @@
   position: fixed;
   right: 0;
   top: 0;
+  z-index: 20;
 }
 
 .profile-camera__image-container {

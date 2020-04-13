@@ -1,8 +1,5 @@
 .landing__container {
-  position: relative;
-  z-index: 10;
   align-items: center;
-  background-image: linear-gradient(rgba(26, 63, 86, 0.726) ,rgba(27, 40, 56, 0.452) 25%);
   color: #b8b6b4;
   display: flex;
   flex-direction: column;

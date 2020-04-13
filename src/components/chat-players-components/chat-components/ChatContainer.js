@@ -3,7 +3,6 @@ import ChatHeader from "./ChatHeader";
 import ChatForm from "./ChatForm";
 import MessageList from "./MessageList";
 import "../../../styles/chat-styles/chatcontainer.css";
-// import RtcContainer from '../../rtc-components/RtcContainer';
 
 const ChatContainer = ({
   handleChatSubmit,
@@ -24,7 +23,6 @@ const ChatContainer = ({
         justify="space-between"
       />
       <MessageList messages={messages} />
-      {/* <RtcContainer /> */}
       <ChatForm
         handleChatSubmit={handleChatSubmit}
         roomid={roomid}

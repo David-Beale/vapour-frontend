@@ -16,7 +16,7 @@ const Profile = () => {
 
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => setModalIsOpen(false);
-  const afterOpenModal = () => console.log("modal");
+  const afterOpenModal = () => {};
 
   const openForm = type => setIsOpenForm(type);
   const closeForm = type => setIsOpenForm(false);
