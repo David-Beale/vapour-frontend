@@ -1,4 +1,6 @@
 # Vapour
+![vapour](https://user-images.githubusercontent.com/59053870/79228704-d04b3400-7e59-11ea-885a-3ac3dbd4fec8.png)
+
 #### Vapour is a full stack social gaming platform on which users can play games and chat with eachother.
 https://github.com/David-Beale/Vapour-backend
 
