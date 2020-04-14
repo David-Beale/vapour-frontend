@@ -1,68 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Vapour
+https://vapour.netlify.com/  
+![vapour](https://user-images.githubusercontent.com/59053870/79228704-d04b3400-7e59-11ea-885a-3ac3dbd4fec8.png)
 
-## Available Scripts
+#### Vapour is a full stack social gaming platform on which users can play games and chat with eachother.
+https://github.com/David-Beale/Vapour-backend
 
-In the project directory, you can run:
+## Features
+ 
+### Multiplayer Games
+![vapour-img2](https://user-images.githubusercontent.com/59053870/79227569-012a6980-7e58-11ea-9045-963b7d2eaaaf.png)  
+#### The first game is inspired by Agario and Asteroids. It is a free for all multiplayer game using SocketIO. Players can eat the green food to gain mass and ammo. Players can shoot opponents or eat them if they are bigger than them. Getting hit reduces your size and you will die if you get too small. Player names and images are downloaded from Vapour's database.
+        
+![vapour-img3](https://user-images.githubusercontent.com/59053870/79227572-01c30000-7e58-11ea-9e78-d459bc240289.jpg)  
+#### The second game is a classic game of Pong. It is a 1v1 game using SocketIO but more players can spectate and join a queue. The loser will be sent to the back of the queue and the winner keeps playing. Player names and images are downloaded from Vapour's database.
 
-### `yarn start`
+#### The platform also has 2 single player games: Snake and a side scroller.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Chat  
+![vapour-img6](https://user-images.githubusercontent.com/59053870/79227564-0091d300-7e58-11ea-9b1f-c4853f6ea7a3.png)  
+#### The platform features a chat section where users can chat with other online users.Messages are sent using SocketIO and stored in the database for future sessions. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Chat rooms
+![vapour-img7](https://user-images.githubusercontent.com/59053870/79227566-012a6980-7e58-11ea-8d87-d4e6400db499.png)
+#### There are also several chat rooms where users can discuss topics with everyone else in the room.
 
-### `yarn test`
+### Facial Recognition
+#### The profile section allows users to submit a profile image using their webcam or via file upload. FaceAPI is used to detect a face, which is then cropped and stored on the database.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Vapour effect
+#### The background canvas uses fluid dynamics algorithms to display a vapour style effect.
 
-### `yarn build`
+## Built With
+* React
+* Redux
+* Express
+* SocketIO
+* Mongo DB
+* Passport
+* p5.js#
+* faceAPI
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## My contributions:
+* Front and back end authentication
+* 2 multiplayer games using Socket IO and canvas
+* Integration of FaceAPI
+* Integration of vapour effect
+* Deployment of frontend and backend
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Other contributors
+* Pawel Pietruszka
+* Joseph Tolentino Cayamanda 
+* Vic Williams
+* Mooness Davarian
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Acknowledgements
+* Mattias Harrysson. fluids-2d. fluid solver in WebGL
+* Jos Stam. Stable Fluids. In Proceedings of SIGGRAPH. 1999.
+* Jos Stam. Real-Time Fluid Dynamics for Games. Proceedings of the Game Developer Conference. 2003.
+* Mark Harris. Fast Fluid Dynamics Simulation on the GPU. In GPU Gems: Programming Techniques, Tips, and Tricks for Real-Time Graphics (Chapter 38). 2004.
